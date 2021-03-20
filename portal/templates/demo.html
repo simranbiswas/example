@@ -1,0 +1,419 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>E-Learning Portal </title>
+    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="{% static "vendors/bootstrap/dist/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "vendors/font-awesome/css/font-awesome.min.css" %}">
+    <link rel="stylesheet" href="{% static "vendors/themify-icons/css/themify-icons.css" %}">
+    <link rel="stylesheet" href="{% static "vendors/flag-icon-css/css/flag-icon.min.css" %}">
+    <link rel="stylesheet" href="{% static "vendors/selectFX/css/cs-skin-elastic.css" %}">
+    <link rel="stylesheet" href="{% static "vendors/jqvmap/dist/jqvmap.min.css" %}">
+
+    <link rel="stylesheet" href="{% static "assets/css/style.css" %}">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+   
+<style >
+    
+
+
+.footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height:120px;
+    background:#272c33;
+}
+</style>
+</head>
+
+<body>
+
+
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-he ader">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand"   href="./"><img src="{% static "images/dash.png" %}" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="./"><img src="{% static "images/dashb.png" %}" alt="Logo"></a>
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href=""> <i class="menu-icon fa fa-dashboard" ></i><b>Home</b></a>
+                    </li>
+                    <h3 class="menu-title">Quick Links</h3><!-- /.menu-title -->
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-star"></i>Popular</a>
+                            </li>
+                        
+                            <li class>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-spinner"></i>Upcoming</a>
+                            </li>
+                            <li class>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bell"></i>This Week</a>
+                            </li>
+
+
+                    <h3 class="menu-title">Get Started</h3><!-- /.menu-title -->
+
+                    <li >
+                        <a href="{% url 'log' %}"> <i class="menu-icon fa fa-tasks"></i>Login</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'resignup' %}"> <i class="menu-icon ti-email"></i>Sign Up </a>
+                    </li>
+                    
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside><!-- /#left-panel -->
+
+    <!-- Left Panel -->
+
+
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                        <button class="search-trigger"><i class="fa fa-search"></i></button>
+                        <div class="form-inline">
+                            <form class="search-form">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
+                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                            </form>
+                        </div>
+
+
+                        <div class="dropdown for-message">
+                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                id="message"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="ti-email"></i>
+                                <span class="count bg-primary">4</span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="message">
+                                <p class="red">You have 2 Mails</p>
+                                <a class="dropdown-item media bg-flat-color-1" href="#">
+                                <span class="message media-body">
+                                    <span class="name float-left">Simran Biswas</span>
+                                    <span class="time float-right">Just now</span>
+                                        <p>Hello, you are selected for hackathon</p>
+                                </span>
+                                </a>
+                                    <a class="dropdown-item media bg-flat-color-4" href="#">
+                                    <span class="message media-body">
+                                        <span class="name float-left">Novia Dsilva</span>
+                                        <span class="time float-right">5 minutes ago</span>
+                                            <p>Hello, you are selected for hackathon</p>
+                                    </span>
+                                </a>
+                            </a>
+                            <a class="dropdown-item media bg-flat-color-5" href="#">
+                            <span class="message media-body">
+                                <span class="name float-left">Chelsea Dabre</span>
+                                <span class="time float-right">10 minutes ago</span>
+                                    <p>Hello, you are selected for hackathonr</p>
+                            </span>
+                        </a>
+                           
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p>Guest</p>
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
+                            <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
+                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+        <br>
+
+
+           <!--Start of boxes-->
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card text-white bg-flat-color-3">
+                        <div class="card-body pb-0">
+                            <h4 class="mb-0">
+                                <span class="count">100</span>
+                            </h4>
+                            <p class="text-light">Courses</p>
+                            <i class="menu-icon fa fa-star"></i>
+                            <i class="menu-icon fa fa-book"></i>
+                        </div>
+                        <div class="chart-wrapper px-0" style="height:70px;" height="70">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card text-white bg-flat-color-1">
+                        <div class="card-body pb-0">
+                            <h4 class="mb-0">
+                                <span class="count">300</span>
+                            </h4>
+                            <p class="text-light">Live Courses Session</p>
+                            <i class="menu-icon fa fa-plus"></i>
+                            <i class="menu-icon fa fa-tasks"></i>
+                            <div class="chart-wrapper px-3" style="height:70px;" height="70">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card text-white bg-flat-color-4">
+                        <div class="card-body pb-0">
+                            <h4 class="mb-0">
+                                <span class="count">500</span>
+                            </h4>
+                            <p class="text-light">Registered Students</p>
+                            <i class="menu-icon fa fa-check"></i>
+                            <i class="menu-icon fa fa-user"></i>
+                            <div class="chart-wrapper px-3" style="height:70px;" height="70">   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card text-white bg-flat-color-2">
+                        <div class="card-body pb-0">
+                            <h4 class="mb-0">
+                                <span class="count">100</span>
+                            </h4>
+                            <p class="text-light">Expert Instructors</p>
+                            <i class="menu-icon fa fa-check-circle"></i>
+                            <i class="menu-icon fa fa-users"></i>
+                            <div class="chart-wrapper px-0" style="height:70px;" height="70">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+        <!--End of boxes-->
+
+        <br>
+
+        <div class="container mt-5 ">
+            <h2 style="text-align:center; color:navy">Courses</h2>
+            <br>
+  
+            <div class="card-deck mt-4">
+                        <a href="#" class="btn" style="text-align:left ;padding:0px;margin:0px;">
+                            <div class="card">
+                                <img src="{% static "images/javanew.png" %}" class="card-img-top" alt="ML">
+                                <div class="card-body">
+                                <h5>Core Java</h5>
+                                <p style="overflow: hidden;">Lorem ipsum, or lipsum as it is sometimes known, 
+                                    is dummy text used in laying out print, graphic or web designs.</p>
+                                </div>
+                                <div class="card-footer">
+                                <a href="{% url 'log' %}" class="btn btn-primary text-white font-weoght-bolder float-right">VISIT</a>
+                                </div>
+                             </div>
+                        </a>
+            
+                        <a href="#" class="btn" style="text-align:left ;padding:0px;margin:0px;">
+                            <div class="card">
+                                <img src="{% static "images/blockchain.jpg" %}" class="card-img-top" alt="ML">
+                                <div class="card-body">
+                                <h5>Blockchain</h5>
+                                <p style="overflow: hidden;">Lorem ipsum, or lipsum as it is sometimes known, 
+                                    is dummy text used in laying out print, graphic or web designs.</p>
+                                </div>
+                                <div class="card-footer">
+                                <a href="{% url 'log' %}" class="btn btn-primary text-white font-weoght-bolder float-right">VISIT</a>
+                                </div>
+                             </div>
+                        </a>
+
+                        <a href="#" class="btn" style="text-align:left ;padding:0px;margin:0px;">
+                            <div class="card">
+                                <img src="{% static "images/cc.jpg" %}" class="card-img-top" alt="ML">
+                                <div class="card-body">
+                                <h5>C Language</h5>
+                                <p style="overflow: hidden;">Lorem ipsum, or lipsum as it is sometimes known, 
+                                    is dummy text used in laying out print, graphic or web designs.</p>
+                                </div>
+                                <div class="card-footer">
+                                <a href="{% url 'log' %}" class="btn btn-primary text-white font-weoght-bolder float-right">VISIT</a>
+                                </div>
+                             </div>
+                        </a>
+
+            </div>
+  
+  
+            <div class="card-deck mt-4">
+                    <a href="#" class="btn" style="text-align:left ;padding:0px;margin:0px;">
+                        <div class="card">
+                            <img src="{% static "images/pyhton.png" %}" class="card-img-top" alt="ML">
+                            <div class="card-body">
+                            <h5>Python</h5>
+                            <p style="overflow: hidden;">Lorem ipsum, or lipsum as it is sometimes known, 
+                                is dummy text used in laying out print, graphic or web designs.</p>
+                            </div>
+                            <div class="card-footer">
+                            <a href="{% url 'log' %}" class="btn btn-primary text-white font-weoght-bolder float-right">VISIT</a>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="btn" style="text-align:left ;padding:0px;margin:0px;">
+                        <div class="card">
+                            <img src="{% static "images/web.jpg" %}" class="card-img-top" alt="ML">
+                            <div class="card-body">
+                            <h5>Web Development</h5>
+                            <p style="overflow: hidden;">Lorem ipsum, or lipsum as it is sometimes known, 
+                                is dummy text used in laying out print, graphic or web designs.</p>
+                            </div>
+                            <div class="card-footer">
+                            <a href="{% url 'log' %}" class="btn btn-primary text-white font-weoght-bolder float-right">VISIT</a>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="btn" style="text-align:left ;padding:0px;margin:0px;">
+                        <div class="card">
+                            <img src="{% static "images/ai.jpeg" %}" class="card-img-top" alt="ML">
+                            <div class="card-body">
+                            <h5>Artificial Intelligence</h5>
+                            <p style="overflow: hidden;">Lorem ipsum, or lipsum as it is sometimes known, 
+                                is dummy text used in laying out print, graphic or web designs.</p>
+                            </div>
+                            <div class="card-footer">
+                            <a href="{% url 'log' %}" class="btn btn-primary text-white font-weoght-bolder float-right">VISIT</a>
+                            </div>
+                        </div>
+                        
+                    </a>
+
+            </div>
+                     
+            </div>
+            <br>
+
+     <div class="footer">
+        
+         <div class="container">
+            <div class="row">
+                
+                <div class="container-fluid social">
+                    <div class="row text-white text-center p-1">
+                        <div class="col-sm">
+                          <a class="text-white social-hover" href="#">
+                          <i class="fa fa-twitter " style="color:#1DA1F2; margin-right:10px;font-size:20px"></i>Twitter
+                         </a>
+                        </div>
+                        <div class="col-sm">
+                          <a class="text-white social-hover" href="#">
+                          <i class="fa fa-facebook" style="color:#4267B2; margin-right:10px;font-size:20px"></i>Facebook
+                         </a>
+                        </div>
+                        <div class="col-sm">
+                          <a class="text-white social-hover" href="#">
+                          <i class="fa fa-instagram" style="color:#E1306C; margin-right:10px;font-size:20px"></i>Instagram
+                         </a>
+                        </div>
+                        <div class="col-sm">
+                          <a class="text-white social-hover" href="#">
+                          <i class="fa fa-linkedin" style="color:#00B2FF; margin-right:10px;font-size:20px"></i>Linkedin
+                         </a>
+                        </div>
+                    </div>
+               </div>
+            
+
+                    <div class="col-md-12">
+                        <p> Copyright &copy; Designed By Team Mercury || VCET Hackathon</p>
+                    </div>
+                </div>
+              </div>
+                    
+            </div>
+         </div>
+
+        </div> <!-- .content -->
+      
+       
+    </div><!-- /#right-panel -->
+
+
+
+
+
+    <!-- Right Panel -->
+
+    <script src="{% static "vendors/jquery/dist/jquery.min.js" %}"></script>
+    <script src="{% static "vendors/popper.js/dist/umd/popper.min.js" %}"></script>
+    <script src="{% static "vendors/bootstrap/dist/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "assets/js/main.js" %}"></script>
+
+    <script src="{% static "vendors/chart.js/dist/Chart.bundle.min.js" %}"></script>
+    <script src="{% static "assets/js/dashboard.js" %}"></script>
+    <script src="{% static "assets/js/widgets.js" %}"></script>
+    <script src="{% static "vendors/jqvmap/dist/jquery.vmap.min.js" %}"></script>
+    <script src="{% static "vendors/jqvmap/examples/js/jquery.vmap.sampledata.js" %}"></script>
+    <script src="{% static "vendors/jqvmap/dist/maps/jquery.vmap.world.js" %}"></script>
+    <script>
+        (function($) {
+            "use strict";
+
+            jQuery('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: null,
+                color: '#ffffff',
+                hoverOpacity: 0.7,
+                selectedColor: '#1de9b6',
+                enableZoom: true,
+                showTooltip: true,
+                values: sample_data,
+                scaleColors: ['#1de9b6', '#03a9f5'],
+                normalizeFunction: 'polynomial'
+            });
+        })(jQuery);
+    </script>
+
+</body>
+
+</html>
